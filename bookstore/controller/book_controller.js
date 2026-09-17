@@ -1,4 +1,4 @@
-import { Book } from "../model/book_model";
+import { Book } from "../model/book_model.js";
 
 //controller is one type of function where specified process to handle request
 
