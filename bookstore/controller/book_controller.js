@@ -4,12 +4,11 @@ import { Book } from "../model/book_model";
 
 export const insertBook = async (req, res) => {
   try {
-    const id = req.params.id;
-   res.json({
-    id,
-    message:"book inserted succesfuly !",
-   })
-
+    
+    res.json({
+      data:req.body,
+      message: "book inserted succesfuly !",
+    });
   } catch (err) {
     res.status(500).json({
       message: "book insertion failed !",
@@ -18,8 +17,7 @@ export const insertBook = async (req, res) => {
   }
 };
 
-// req- user => send 
+// req- user => send
 // 1 query parameter 2-4 value send krni hain tab use how to use? => req.query
 //2 params = singke value send krni hain tab => req.params
 //3 body = multiple value send krni hain tab => req.body
-
