@@ -1,9 +1,12 @@
 import express from "express";
-import { insertBook } from "../controller/book_controller";
+import { fetchBook, insertBook, removeBook, updateBook } from "../controller/book_controller";
 
 const router = express.Router();
 
 router.post("/:id",insertBook);
+router.get("/",fetchBook);
+router.delete("/",removeBook);
+router.put("/",updateBook);
 
 
 
