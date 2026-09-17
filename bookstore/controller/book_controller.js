@@ -4,7 +4,7 @@ import { Book } from "../model/book_model";
 
 export const insertBook = async (req, res) => {
   try {
-    
+    await Book.create(req.body);
     res.json({
       data:req.body,
       message: "book inserted succesfuly !",
