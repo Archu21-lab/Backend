@@ -3,7 +3,8 @@ import bcrypt from "bcrypt";
 
 export const signUp = async (req, res) => {
   try {
-    const user = req.body;
+    const {name ,email,password} = req.body;
+    const hashPassword = bcrypt.hash(password)
     await Auth.create(user);
     res.json({ status: true, message: "signup successfully !" });
   } catch (err) {
