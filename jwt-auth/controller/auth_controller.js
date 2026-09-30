@@ -1,6 +1,8 @@
 import { Auth } from "../model/auth_model";
 import bcrypt from "bcrypt";
 
+//res.cookie("token",token,{maxAge:1000 * 60 (min) * 60 (1hour)*24(hours)*7(days)})
+
 export const signUp = async (req, res) => {
   try {
     const { name, email, password } = req.body;
